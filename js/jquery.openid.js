@@ -2,7 +2,7 @@
 OpenID Plugin
 http://code.google.com/p/openid-realselector/
 
-This code is licenced under the New BSD License.
+Martin Conte Mac Donell <Reflejo@gmail.com>
 */
 
 jQuery.fn.openid = function(opt) {
