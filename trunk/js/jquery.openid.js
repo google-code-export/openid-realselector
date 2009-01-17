@@ -105,7 +105,7 @@ jQuery.fn.openid = function(opt) {
       if ((pos = c[i].indexOf("openid_prov=")) != -1) 
         return $.trim(c[i].slice(pos + 12));
     }
-  }
+  };
 
   var signIn = function(obj, tidx) {
     var idx = $(tidx || this).attr('id').replace('btn_', '');
@@ -129,7 +129,7 @@ jQuery.fn.openid = function(opt) {
       }
     }
     return false;
-  }
+  };
 
   var showInputBox = function() {
     var lbl = (gprovider.label || settings.txt.label).replace(
@@ -140,7 +140,7 @@ jQuery.fn.openid = function(opt) {
       ' name="username_txt" class="Verisign"/><input type="submit" value="' + settings.txt.sign + '"/>');
 
     $('#' + INPUTID).focus();
-  }
+  };
 
   var submit = function(){
     var prov = (gprovider.url) ? gprovider.url.replace('{username}', $('#' + INPUTID).val()): $('#' + INPUTID).val();
