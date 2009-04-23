@@ -52,11 +52,11 @@ Martin Conte Mac Donell <Reflejo@gmail.com>
         },
         {
           name: 'Flickr',
-          url: 'http://flickr.com/{username}/',
+          url: 'http://flickr.com/{username}/'
         },
         {
           name: 'Technorati',
-          url: 'http://technorati.com/people/technorati/{username}/',
+          url: 'http://technorati.com/people/technorati/{username}/'
         },
         {
           name: 'Wordpress',
@@ -64,28 +64,32 @@ Martin Conte Mac Donell <Reflejo@gmail.com>
         },
         {
           name: 'Blogger',
-          url: 'http://{username}.blogspot.com/',
+          url: 'http://{username}.blogspot.com/'
         },
         {
           name: 'Verisign',
-          url: 'http://{username}.pip.verisignlabs.com/',
+          url: 'http://{username}.pip.verisignlabs.com/'
         },
         {
           name: 'Vidoop',
-          url: 'http://{username}.myvidoop.com/',
+          url: 'http://{username}.myvidoop.com/'
         },
         {
           name: 'ClaimID',
-          url: 'http://claimid.com/{username}',
+          url: 'http://claimid.com/{username}'
         },
         {
           name: 'LiveJournal',
-          url: 'http://{username}.livejournal.com',
+          url: 'http://{username}.livejournal.com'
+        },
+        {
+          name: 'MySpace',
+          url: 'http://www.myspace.com/{username}'
         }
       ],
       cookie_expires: 6 * 30, // in days.
       cookie_path: '/',
-      img_path: '/img/',
+      img_path: '/img/'
     };
   
     var getBox = function(provider, idx, box_size) {
