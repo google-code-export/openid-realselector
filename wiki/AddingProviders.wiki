@@ -69,3 +69,7 @@ This overrides the background image set in the definition for:
 It overrides according to the [http://htmldog.com/guides/cssadvanced/specificity/ rules of Specificity].
 
 So, quickly adding a provider doesn't require you to get the image editor out and start counting pixels. You can add the to openid-icons.png image later, when you have more time and coffee to aid your concentration.
+
+=Icon look and feel=
+
+Martin, please add details on which software and commands you used to create the beveled look of the icons in openid-icons.png. Thanks!
