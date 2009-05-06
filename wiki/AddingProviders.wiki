@@ -1,5 +1,11 @@
 #summary How to add new providers and the icons that go with them
 
+=List of providers=
+
+The provider list is maintained in jquery.openid.js as the providers[] array. It should be pretty obvious how to add and remove providers from this list.
+
+Additionally, the demo.html file shows how to override settings from the HTML file. You can override the text used to prompt the user and you can override the list or providers.
+
 =Styling with CSS=
 
 <table>
