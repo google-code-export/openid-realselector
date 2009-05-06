@@ -38,10 +38,12 @@ Then, in the CSS we can see that all buttons are defined as having openid-icons.
 
 Next, we see that all small buttons are defined as being 16px by 16px in size.
 
+{{{
 .openid_small_btn {
   width: 16px;
   height: 16px;
 }
+}}}
 
 Finally, we see that anything with a class of VeriSign is defines an offset on its background position. This positions the background image so that the 16 x 16 square you see is bit with the VeriSign logo in it.
 
@@ -60,6 +62,10 @@ Although it's more efficient in terms of HTTP requests to have all the images pa
 }}}
 
 This overrides the background image set in the definition for:
+{{{
 .openid_large_btn, .openid_small_btn
+}}}
+
+It overrides according to the [http://htmldog.com/guides/cssadvanced/specificity/ rules of Specificity].
 
 So, quickly adding a provider doesn't require you to get the image editor out and start counting pixels. You can add the to openid-icons.png image later, when you have more time and coffee to aid your concentration.
