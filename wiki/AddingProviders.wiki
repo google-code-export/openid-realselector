@@ -1,0 +1,65 @@
+#summary How to add new providers and the icons that go with them
+
+=Styling with CSS=
+
+<table>
+<tr>
+<td>
+<img src="http://openid-realselector.googlecode.com/svn/trunk/img/openid-icons.png"></img>
+</td>
+<td>
+It initially took me a bit of time to work out how icons are laid out on the selector when given the fact that all the icons are contained within the same .png file. However, the technique is very flexible and effective once it's clear how it works.
+</td>
+</tr>
+</table>
+
+First, the following code in jquery.openid.js is used to create each of the icons:
+
+{{{
+    var getBox = function(provider, idx, box_size) {
+      var a = $('<a title="' + provider + '" href="#" id="btn_' + idx + 
+                '" class="openid_' + box_size + '_btn ' + provider + '" />');
+      return a.click(signIn);
+    };
+}}}
+
+You can see that the *class* of link is named depending on the size of the box and the provider. So, the VeriSign block is called:
+*openid_small_btn Verisign*
+
+Then, in the CSS we can see that all buttons are defined as having openid-icons.png as the background image.
+
+{{{
+.openid_large_btn, .openid_small_btn {
+  background: url(../img/openid-icons.png) no-repeat;
+  margin: 3px;
+  float: left;
+}
+}}}
+
+Next, we see that all small buttons are defined as being 16px by 16px in size.
+
+.openid_small_btn {
+  width: 16px;
+  height: 16px;
+}
+
+Finally, we see that anything with a class of VeriSign is defines an offset on its background position. This positions the background image so that the 16 x 16 square you see is bit with the VeriSign logo in it.
+
+{{{
+.Verisign { background-position: -51px -220px; }
+}}}
+
+=Adding an individual icon=
+
+Although it's more efficient in terms of HTTP requests to have all the images packed into one file, it hurts my brain to try to work out the coordinates. Luckily, due to the flexibility of the CSS styling, we can use a standalone icon for VeriSign instead by just using:
+
+{{{
+.Verisign {
+  background: url(../img/VeriSign.png);
+}
+}}}
+
+This overrides the background image set in the definition for:
+.openid_large_btn, .openid_small_btn
+
+So, quickly adding a provider doesn't require you to get the image editor out and start counting pixels. You can add the to openid-icons.png image later, when you have more time and coffee to aid your concentration.
