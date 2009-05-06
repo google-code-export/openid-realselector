@@ -23,8 +23,8 @@ First, the following code in jquery.openid.js is used to create each of the icon
     };
 }}}
 
-You can see that the *class* of link is named depending on the size of the box and the provider. So, the VeriSign block is called:
-*openid_small_btn Verisign*
+You can see that the *class* of link is named depending on the size of the box and the provider. So, the !VeriSign block is called:
+*openid_small_btn !Verisign*
 
 Then, in the CSS we can see that all buttons are defined as having openid-icons.png as the background image.
 
@@ -45,7 +45,7 @@ Next, we see that all small buttons are defined as being 16px by 16px in size.
 }
 }}}
 
-Finally, we see that anything with a class of VeriSign is defines an offset on its background position. This positions the background image so that the 16 x 16 square you see is bit with the VeriSign logo in it.
+Finally, we see that anything with a class of !VeriSign is defines an offset on its background position. This positions the background image so that the 16 x 16 square you see is bit with the !VeriSign logo in it.
 
 {{{
 .Verisign { background-position: -51px -220px; }
@@ -53,7 +53,7 @@ Finally, we see that anything with a class of VeriSign is defines an offset on i
 
 =Adding an individual icon=
 
-Although it's more efficient in terms of HTTP requests to have all the images packed into one file, it hurts my brain to try to work out the coordinates. Luckily, due to the flexibility of the CSS styling, we can use a standalone icon for VeriSign instead by just using:
+Although it's more efficient in terms of HTTP requests to have all the images packed into one file, it hurts my brain to try to work out the coordinates. Luckily, due to the flexibility of the CSS styling, we can use a standalone icon for !VeriSign instead by just using:
 
 {{{
 .Verisign {
